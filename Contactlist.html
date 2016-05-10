@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Contact List</title>
+<body>
+
+<script>
+  
+  var friends= {
+    bill: {
+       firstName: "Bill",
+       lastName: "Gates",
+       number: "267948323",
+       address: ['571', 'Stonewall \n', 'Philadelphia','PA', '191400']
+    },
+    steve: {
+        firstName: "Steve",
+        lastName: "Jobs",
+        number: "267448523",
+        address:['Rverdown', 'St','Saltlake', 'VC', '79805']
+    }
+};
+
+var list = function(object) {
+    for(var key in friends) {
+        console.log (key);
+    }
+};
+    
+var search = function(name) {
+    for(var key in friends) {
+        if(friends[key].firstName===name) {
+            console.log(friends[key]);
+            return friends[key];
+        }else {
+            console.log("nothing")
+        }
+    }
+};
+
+list(friends);
+search("Bill");
+
+</script>
+
+</body>
+</html>
